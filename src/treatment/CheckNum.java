@@ -26,7 +26,7 @@ public class CheckNum {
 
         // Проверка на число 1 до 10
         if (firstIsArabic && secondIsArabic) { // Если оба числа арабские
-            if (Integer.parseInt(firstOperand) > 0 && Integer.parseInt(firstOperand) <= 11 && Integer.parseInt(secondOperand) > 0 && Integer.parseInt(secondOperand) <= 11) {
+            if (Integer.parseInt(firstOperand) > 0 && Integer.parseInt(firstOperand) <= 10 && Integer.parseInt(secondOperand) > 0 && Integer.parseInt(secondOperand) <= 10) {
                 positiveNumber = true;
             }
             isArabic = true;

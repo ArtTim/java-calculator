@@ -8,7 +8,7 @@ public class Convertation {
         String[] roman = checkNum.getRoman();
         String result = "";
         for (int i = 0; i < roman.length; i++) {
-            if (str.toUpperCase().contains(roman[i])) {
+            if (str.toUpperCase().equals(roman[i])) {
                 result = arabian[i];
             }
         }
@@ -38,12 +38,12 @@ public class Convertation {
 
             if (resultArray.length == 2) { // Если число двухзначное
                 for (int j = 0; j < checkNum.getArabic().length; j++) {
-                    if (resultArray[0].contains(checkNum.getArabic()[j])) {
-                        romanResult = checkNum.getRomanNumerous()[j];
+                    if (resultArray[0].equals(checkNum.getArabic()[j])) {
+                        romanResult += checkNum.getRomanNumerous()[j];
                     }
                 }
                 for (int j = 0; j < checkNum.getArabic().length; j++) {
-                    if (resultArray[1].contains(checkNum.getArabic()[j])) {
+                    if (resultArray[1].equals(checkNum.getArabic()[j])) {
                         romanResult += checkNum.getRoman()[j];
                     }
                 }
@@ -58,5 +58,3 @@ public class Convertation {
     }
 
 }
-
-

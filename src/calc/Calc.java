@@ -27,7 +27,7 @@ public class Calc {
     // Калькулятор арабских чисел
     public int arabicCalc() {
         int firstOperand = Integer.parseInt(request.firstOperand),
-                secondOperand = Integer.parseInt(request.secondOperand);
+            secondOperand = Integer.parseInt(request.secondOperand);
         switch (request.operator) {
             case "+":
                 result = firstOperand + secondOperand;
@@ -48,7 +48,8 @@ public class Calc {
     // Калькулятор римских чисел
     public String romanCalc() {
         int firstOperand = convertation.toArabian(request.firstOperand),
-                secondOperand = convertation.toArabian(request.secondOperand);
+            secondOperand = convertation.toArabian(request.secondOperand);
+        String romanResult;
         switch (request.operator) {
             case "+":
                 result = firstOperand + secondOperand;
@@ -63,7 +64,13 @@ public class Calc {
                 result = firstOperand / secondOperand;
                 break;
         }
-        return convertation.toRoman(result);
+        if (result < 0) {
+            romanResult = "-";
+            romanResult += convertation.toRoman(result);
+        } else {
+            romanResult = convertation.toRoman(result);
+        }
+        return romanResult;
     }
 
 }
