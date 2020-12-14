@@ -3,7 +3,7 @@ package treatment;
 public class CheckNum {
     private String [] arabic = {"10","1","2","3","4","5","6","7","8","9"};
     private String [] roman = {"X","I","II","III","IV","V","VI","VII","VIII","IX"};
-    private String [] romanNumerous = {"C", "X","XX","XXX","XL","L","LX","LXX","LXXX"};
+    private String [] romanNumerous = {"C", "X","XX","XXX","XL","L","LX","LXX", "LXXX", "XC"};
     public boolean firstIsArabic = false, secondIsArabic = false, firstIsRoman = false, secondIsRoman = false, positiveNumber = false, isArabic = false, isRoman = false;
 
     public void checkString(String firstOperand, String secondOperand ) { // Проверяется соответствует ли число массиву arabic или roman

@@ -2,7 +2,6 @@ package treatment;
 
 public class Convertation {
     CheckNum checkNum = new CheckNum();
-
     // Преобразование в арабскую систему счисления
     public int toArabian(String str) {
         String[] arabian = checkNum.getArabic();
@@ -38,11 +37,12 @@ public class Convertation {
             String romanResult = "";
 
             if (resultArray.length == 2) { // Если число двухзначное
-//                    System.out.println("Двухзначное число");
                 for (int j = 0; j < checkNum.getArabic().length; j++) {
                     if (resultArray[0].contains(checkNum.getArabic()[j])) {
-                        romanResult += checkNum.getRomanNumerous()[j];
+                        romanResult = checkNum.getRomanNumerous()[j];
                     }
+                }
+                for (int j = 0; j < checkNum.getArabic().length; j++) {
                     if (resultArray[1].contains(checkNum.getArabic()[j])) {
                         romanResult += checkNum.getRoman()[j];
                     }
